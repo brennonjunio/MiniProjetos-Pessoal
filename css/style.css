@@ -1,0 +1,113 @@
+body,
+h1,
+h2,
+li,
+ul,
+p,
+dd,
+dt,
+dl {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  background: #faf6ed;
+  -webkit-font-smoothing: antialiased;
+  display: grid;
+  grid-template-columns: 1fr 120px minmax(300px, 800px) 1fr;
+}
+
+.menu {
+  grid-column: 3 / 5;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  background: #fb5;
+}
+.menu ul {
+  display: flex; /*para alinhar os itens um do lado do outro*/
+  flex-wrap: wrap; /* Os itens quebram caso não caibam na pag*/
+}
+
+.menu li a {
+  display: block;
+  padding: 10px; /*Espaçamento entre os objetos*/
+  margin-right: 10px;
+  color: #222;
+  text-decoration: none; /*para tirar o sublinhado*/
+  font-family: monospace;
+  font-weight: bold; /*Quase um negrito*/
+  text-transform: uppercase; /*todos em letra maiuscula*/
+  font-size: 0.875rem;
+  letter-spacing: 0.1rem; /*espacamento entre cada letra*/
+}
+
+.grid-section {
+  grid-column: 2 / 4; /*colocou a coluna geral no centro*/
+  width: 100%;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 100px 300px 1fr;
+  grid-gap: 20px;
+  margin-bottom: 4rem;
+}
+
+.titulo {
+  font-family: "Playfair Display SC", Georgia;
+  font-size: 6rem;
+  line-height: 1;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  grid-column: 1 / 4;
+}
+
+.animais h2 {
+  font-family: monospace;
+  font-size: 1rem; /*  na teoria 1*15px*/
+  text-transform: uppercase;
+  letter-spacing: 0.1rem; /*espaçamento entre as letras*/
+  margin-bottom: 1rem; /*espaçamento entre o botton ao redor da do H2*/
+  color: #e54;
+}
+.animais h2::before {
+  /*barra antes dos h1s*/
+  content: "";
+  display: inline-block;
+  background: #fb5;
+  width: 40px;
+  height: 10px;
+  margin-right: 10px;
+}
+
+.animais p {
+  font-family: helvetica, arial;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+.animais-lista {
+  height: 370px;
+  overflow-y: scroll;
+  grid-column: 2;
+}
+.animais-lista::-webkit-scrollbar {
+  width: 20px;
+}
+.animais-lista::-webkit-scrollbar-thumb {
+  background: #fb5; /*cor do button da scroolbar*/
+  border-left: 4px solid #faf6ed;
+  border-right: 4px solid #faf6ed;
+}
+.animais-lista::-webkit-scrollbar-track {
+  background: #ddc897; /*cor do button da scroolbar*/
+  border-left: 4px solid #faf6ed;
+  border-right: 4px solid #faf6ed;
+}
